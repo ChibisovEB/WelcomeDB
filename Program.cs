@@ -1,13 +1,11 @@
-﻿Console.WriteLine("Поехали!");
+Console.WriteLine("Поехали!");
 Console.WriteLine("Введите массив строк. Для завершения ввода введите пустую строку.");
-Console.Write("");
-string s="1234";
-List<string> lst=new List<string>();
-lst.Add(s);
-Console.WriteLine(lst[0].Length);
-Console.WriteLine(lst.LastIndexOf);
-
-foreach (string str in arr)
+string s;
+List<string> lst=new List<string>(); //  определение результирующего массива
+do
 {
-    str.Substring(35, 5); /*или*/ str.IndexOf("__0.00")
-}
+    Console.Write(">");
+    s = Console.ReadLine();
+    // сразу добавляем в массив строки, удовлетворяющие условиям задачи
+    if (s != "" & s.Length <= 3) lst.Add(s);
+} while (s != "");
